@@ -51,83 +51,38 @@
             </article>
         </section>
 
-        <section>
-            <article>
-                <p>Parágrafo de teste!!!</p>
-                <br>
+        <form action="contato.html" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Seu nome" required>
 
-                <p>Parágrafo de teste!!!</p>
-                <br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
 
-                <p>Parágrafo de teste!!!</p>
-                <br>
+            <label for="tel">Telefone:</label>
+            <input type="tel" id="tel" name="telefone">
 
-                <p>Parágrafo de teste!!!</p>
-                <br>
+            <label for="qtd">Quantidade:</label>
+            <input type="number" id="qtd" name="qtd" min="1" max="10" value="1">
 
-                <p>Parágrafo de teste!!!</p>
-                <br>
+            <label for="produto">Produto favorito:</label>
+            <select name="produto" id="produto">
+                <option value="expresso">Expresso</option>
+                <option value="cappuccino">Cappuccino</option>
+                <option value="latte">Latte</option>
+            </select>
 
-                <p>Parágrafo de teste!!!</p>
-                <br>
+            <p>Tamanho:</p>
+            <label><input type="radio" name="tamanho" value="p">Pequeno</label>
+            <label><input type="radio" name="tamanho" value="g" checked>Grande</label>
 
-                <p>Parágrafo de teste!!!</p>
-                <br>
+            <label><input type="checkbox" name="extra" value="canela">Canela</label>
+            <label><input type="checkbox" name="extra" value="chantilly">Chantilly</label>
 
-                <p>Parágrafo de teste!!!</p>
-                <br>
+            <label for="msg">Mensagem:</label>
+            <textarea name="mensagem" id="msg" rows="4" placeholder="Sua mensagem"></textarea>
 
-                <p>Parágrafo de teste!!!</p>
-                <br>
-
-                <p>Parágrafo de teste!!!</p>
-                <br>
-
-                <p>Parágrafo de teste!!!</p>
-                <br>
-
-                <p>Parágrafo de teste!!!</p>
-                <br>
-
-                <p>Parágrafo de teste!!!</p>
-                <br>
-
-                <p>Parágrafo de teste!!!</p>
-                <br>
-
-                <p>Parágrafo de teste!!!</p>
-                <br>
-
-                <p>Parágrafo de teste!!!</p>
-                <br>
-
-                <p>Parágrafo de teste!!!</p>
-                <br>
-
-                <p>Parágrafo de teste!!!</p>
-                <br>
-
-                <p>Parágrafo de teste!!!</p>
-                <br>
-
-                <p>Parágrafo de teste!!!</p>
-                <br>
-
-                <p>Parágrafo de teste!!!</p>
-                <br>
-
-                <p>Parágrafo de teste!!!</p>
-                <br>
-
-                <p>Parágrafo de teste!!!</p>
-                <br>
-
-                <p>Parágrafo de teste!!!</p>
-                <br>
-
-                
-            </article>
-        </section>
+            <button type="submit">Enviar pedido</button>
+        </form>
 
         <section id="contato">
             Fale conosco
