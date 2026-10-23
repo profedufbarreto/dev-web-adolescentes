@@ -1,96 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café lógico - Início</title>
+    <title>Flexbox - Aula 1</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .caixa-pai{
+            display: flex;
+            background-color: #e5e7eb;
+            height: 200px;
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 <body>
     
-    <header>
-        <h1>Café Lógico</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="cardapio.html">Cardápio</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+    <h2>Exemplo 1: flex padrão (linha)</h2>
+    <div class="caixa-pai">
+        <div class="caixa">1</div>
+        <div class="caixa">2</div>
+        <div class="caixa">3</div>
+    </div>
 
-    <main>
-        <section>
-            <h2>Bem-vindo</h2>
-            <p>O melhor café artesanal do bairro, feito com carinho.</p>
-            <img src="./images/716RPALajEL._AC_UF894,1000_QL80_.jpg" alt="xícara de café" width="200">
-        </section>
-
-        <section>
-            <ul>
-                <li><a href="https://maps.google.com.br" target="_blank" rel="noopener">Como Chegar</a></li>
-                <li><a href="#contato">Fale Conosco</a></li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Destaques</h2>
-            <article>
-                <h3>Expresso da casa</h3>
-                <p>Encorpado aromático</p>
-            </article>
-            <article>
-                <h3>Cappucino cremoso</h3>
-                <p>Com canela e amor.</p>
-            </article>
-            <article>
-                <ul>
-                    <li>Faça sua escolha</li>
-                    <li>Desfrute do melhor sabor</li>
-                    <li>Volte sempre!</li>
-                </ul>
-            </article>
-        </section>
-
-        <form action="contato.html" method="post">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" placeholder="Seu nome" required>
-
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="tel">Telefone:</label>
-            <input type="tel" id="tel" name="telefone">
-
-            <label for="qtd">Quantidade:</label>
-            <input type="number" id="qtd" name="qtd" min="1" max="10" value="1">
-
-            <label for="produto">Produto favorito:</label>
-            <select name="produto" id="produto">
-                <option value="expresso">Expresso</option>
-                <option value="cappuccino">Cappuccino</option>
-                <option value="latte">Latte</option>
-            </select>
-
-            <p>Tamanho:</p>
-            <label><input type="radio" name="tamanho" value="p">Pequeno</label>
-            <label><input type="radio" name="tamanho" value="g" checked>Grande</label>
-
-            <label><input type="checkbox" name="extra" value="canela">Canela</label>
-            <label><input type="checkbox" name="extra" value="chantilly">Chantilly</label>
-
-            <label for="msg">Mensagem:</label>
-            <textarea name="mensagem" id="msg" rows="4" placeholder="Sua mensagem"></textarea>
-
-            <button type="submit">Enviar pedido</button>
-        </form>
-
-        <section id="contato">
-            Fale conosco
-        </section>
-    </main>
-
-    <footer>
-        <p>Rua das Flores, 123 - Tel: (51) 99999-9999</p>
-    </footer>
 </body>
 </html>
