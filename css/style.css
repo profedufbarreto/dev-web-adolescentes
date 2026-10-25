@@ -5,6 +5,7 @@
 
 body{
     background-color: var(--cor-fundo);
+    margin: 10px;
 }
 
 .paragrafos{
