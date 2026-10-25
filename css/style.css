@@ -1,0 +1,14 @@
+:root{
+    --cor-fundo: #e7c8c8;
+    --cor-elemento: #f7f8ae;
+}
+
+body{
+    background-color: var(--cor-fundo);
+}
+
+.paragrafos{
+    background-color: var(--cor-elemento);
+    border:1px solid black;
+    padding: 20px;
+}
