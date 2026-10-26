@@ -14,6 +14,28 @@ body {
     padding: 40px;
 }
 
+header{
+    border:1px solid white;
+    width: 200px;
+}
+
+header, nav, a{
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: 5px;
+    transition: 0.3s;
+    background-color: var(--cor-destaque);
+}
+
+a{
+    display: inline-block;
+}
+
+a:hover{
+    transform: translateX(8px);
+}
+
 .deflist {
     width: 500px;
     margin: 40px auto;
