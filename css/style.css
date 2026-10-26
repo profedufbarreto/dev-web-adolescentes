@@ -17,6 +17,15 @@ body{
 .deflist{
     margin: 20px;
     padding: 20px;
-    border:1px solid black;
+    border:4px double black;
     width: 200px;
+    box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.8);
+    border-radius: 40px;
+    background-color: yellowgreen;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.deflist dt{
+    font-weight: 700;
 }
