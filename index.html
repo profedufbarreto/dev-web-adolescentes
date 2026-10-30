@@ -8,45 +8,67 @@
 </head>
 <body>
 
-    <header>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Sobre</a>
-        </nav>
-    </header>
 
-<main>
-    <section>
-        <article>
-            <h3>Entendendo um pouco:</h3>
-            <p>Listas ordenadas e não ordenadas</p>
-        </article>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-        </ul>
-        <dl class="deflist">
+<div>
+    <h3>Praticando Formulário!</h3>
+    <div class="form">
+        <form action="#" method="post">
+            
+            <div class="nome">
+                <label for="nome">Nome:</label>
+                <br><br>
+                <input type="text" name="nome" placeholder="Digite seu nome..">
+            </div>
 
-    <div class="def-item">
-        <dt>HTML</dt>
-        <dd>Faz a estrutura do site</dd>
+            <div class="email">
+                <br>
+                <label for="email">E-mail:</label>
+                <br><br>
+                <input type="email" name="email" placeholder="seuemail@mail.com">
+            </div>
+
+            <div class="senha">
+                <br>
+                <label for="senha">Senha:</label>
+                <br><br>
+                <input type="password" name="senha" placeholder="Senha..">
+            </div>
+
+            <div class="numero">
+                <br>
+                <label for="idade">Idade:</label>
+                <br><br>
+                <input type="number" name="idade" min="0" max="120">
+                <br><br>
+            </div>
+
+            <div class="data">
+                <br>
+                <label for="dataNascimento">Data de Nascimento:</label>
+                <br><br>
+                <input type="date" name="dataNascimento">
+                <br><br>
+            </div>
+
+            <div class="telefone">
+                <br>
+                <label for="telefone">Telefone:</label>
+                <br><br>
+                <input type="tel" name="telefone">
+                <br><br>
+            </div>
+
+            <div class="url">
+                <br>
+                <label for="site">Site:</label>
+                <br><br>
+                <input type="url" name="site">
+                <br><br>
+            </div>
+
+        </form>
     </div>
-
-    <div class="def-item">
-        <dt>CSS</dt>
-        <dd>Faz a estilização</dd>
-    </div>
-
-    <div class="def-item">
-        <dt>JavaScript</dt>
-        <dd>Faz a interação</dd>
-    </div>
-
-</dl>
-    </section>
-</main>
+</div>
     
 
 <footer>
