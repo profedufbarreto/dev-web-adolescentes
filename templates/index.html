@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos</title>
+</head>
+<body>
+    
+    <h1>Cadastro de Alunos</h1>
+
+    <form action="/cadastrar" method="post">
+
+        <label for="nome">Nome:</label>
+        <br><br>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <br><br>
+        <input type="email" name="email" id="email" placeholder="seu@email.com" required>
+        <br><br>
+
+        <label for="idade">Idade:</label>
+        <br><br>
+        <input type="number" id="idade" name="idade" min="13" max="99" required>
+        <br><br>
+
+        <label for="cor">Cor Favorita:</label>
+        <br><br>
+        <input type="color" id="cor" name="cor" value="#3498db">
+        <br><br>
+
+        <button type="submit">Cadastrar</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Alunos Cadastrados</h2>
+
+    <table border="1">
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Idade</th>
+                <th>Cor</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for aluno in alunos %}
+            <tr>
+                <td{{ aluno.id }}></td>
+                <td>{{ aluno.nome }}</td>
+                <td>{{ aluno.email }}</td>
+                <td>{{ aluno.idade }}</td>
+                <td style="background-color: {{ aluno.cor_favorita }};">{{ aluno.cor_favorita }}</td>
+            </tr>
+            {% enfdor %}
+        </tbody>
+
+    </table>
+
+</body>
+</html>
