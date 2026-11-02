@@ -18,7 +18,7 @@ def index():
 @app.route("/cadastrar", methods=["POST"])
 def cadastrar():
     nome = request.form["nome"]
-    email = request.forme["email"]
+    email = request.form["email"]
     idade = request.form["idade"]
     cor = request.form["cor"]
     

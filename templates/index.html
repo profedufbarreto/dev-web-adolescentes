@@ -53,13 +53,13 @@
         <tbody>
             {% for aluno in alunos %}
             <tr>
-                <td{{ aluno.id }}></td>
+                <td>{{ aluno.id }}</td>
                 <td>{{ aluno.nome }}</td>
                 <td>{{ aluno.email }}</td>
                 <td>{{ aluno.idade }}</td>
                 <td style="background-color: {{ aluno.cor_favorita }};">{{ aluno.cor_favorita }}</td>
             </tr>
-            {% enfdor %}
+            {% endfor %}
         </tbody>
 
     </table>
