@@ -4,28 +4,29 @@ import sqlite3
 app = Flask(__name__)
 
 def conectar():
-    conexao = sqlite3.connect("cadastro.db")
+    conexao = sqlite3.connect("filmes.db")
     conexao.row_factory = sqlite3.Row
     return conexao
 
 @app.route("/")
 def index():
     conexao = conectar()
-    alunos = conexao.execute("SELECT * FROM alunos").fetchall()
+    filmes = conexao.execute("SELECT * FROM filmes").fetchall()
     conexao.close()
-    return render_template("index.html", alunos=alunos)
+    return render_template("index.html", filmes=filmes)
 
 @app.route("/cadastrar", methods=["POST"])
 def cadastrar():
-    nome = request.form["nome"]
-    email = request.form["email"]
-    idade = request.form["idade"]
-    cor = request.form["cor"]
+    titulo = request.form["titulo"]
+    genero = request.form["genero"]
+    nota = request.form["nota"]
+    ano = request.form["ano"]
+    assistido = request.form.get("assisto", "Não")
     
     conexao = conectar()
     conexao.execute(
-        "INSERT INTO alunos (nome, email, idade, cor_favorita) VALUES (?, ?, ?, ?)",
-        (nome, email, idade, cor)
+        "INSERT INTO filmes (titulo, genero, nota, ano, assistido) VALUES(?, ?, ?, ?, ?)",
+        (titulo, genero, nota, ano, assistido)
     )
     conexao.commit()
     conexao.close()
@@ -34,3 +35,4 @@ def cadastrar():
 
 if __name__ == "__main__":
     app.run(debug=True)
+    

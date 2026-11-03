@@ -3,66 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Alunos</title>
+    <title>Cadastro de Filmes</title>
 </head>
 <body>
     
-    <h1>Cadastro de Alunos</h1>
+    <h1>Cadastro de Filmes</h1>
 
-    <form action="/cadastrar" method="post">
+    <form action="/cadastrar" method="POST">
 
-        <label for="nome">Nome:</label>
+        <label for="titulo">Título:</label>
         <br><br>
-        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-        <br><br>
-
-        <label for="email">Email:</label>
-        <br><br>
-        <input type="email" name="email" id="email" placeholder="seu@email.com" required>
+        <input type="text" name="titulo" placeholder="Nome do filme" required>
         <br><br>
 
-        <label for="idade">Idade:</label>
+        <label>Gênero:</label>
+        <select name="genero" id="genero" required>
+            <option value="">Escolha:</option>
+            <option value="Ação">Ação</option>
+            <option value="Comédia">Comédia</option>
+            <option value="Drama">Drama</option>
+            <option value="Terror">Terror</option>
+            <option value="Ficção Científica">Ficção Científica</option>
+            <option value="Romance">Romance</option>
+            <option value="Animação">Animação</option>
+        </select><br><br>
+
+        <label>Nota: <span id="valorNota">5</span></label>
+        <br>
+        <input type="range" name="nota" min="0" max="10" value="5"
+            oninput="document.getElementById('valorNota').textContent = this.value">
+            <br><br>
+        
+        <label>Ano de Lançamento:</label>
         <br><br>
-        <input type="number" id="idade" name="idade" min="13" max="99" required>
+        <input type="number" name="ano" id="ano" min="1900" max="2026" placeholder="2024">
         <br><br>
 
-        <label for="cor">Cor Favorita:</label>
-        <br><br>
-        <input type="color" id="cor" name="cor" value="#3498db">
-        <br><br>
+        <label>
+            <input type="checkbox" name="assistido" value="Sim">
+            Já assisti
+        </label>
 
         <button type="submit">Cadastrar</button>
 
     </form>
 
-    <hr>
-
-    <h2>Alunos Cadastrados</h2>
+    <h2>Filmes cadastrados</h2>
 
     <table border="1">
 
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Idade</th>
-                <th>Cor</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for aluno in alunos %}
-            <tr>
-                <td>{{ aluno.id }}</td>
-                <td>{{ aluno.nome }}</td>
-                <td>{{ aluno.email }}</td>
-                <td>{{ aluno.idade }}</td>
-                <td style="background-color: {{ aluno.cor_favorita }};">{{ aluno.cor_favorita }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-
+        <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Gênero</th>
+            <th>Nota</th>
+            <th>Ano</th>
+            <th>Assistido</th>
+        </tr>
+        {% for filme in filmes %}
+        <tr>
+            <td>{{ filme.id }}</td>
+            <td>{{ filme.titulo }}</td>
+            <td>{{ filme.genero }}</td>
+            <td>{{ filme.nota }}</td>
+            <td>{{ filme.ano }}</td>
+            <td>{{ filme.assistido }}</td>
+        </tr>
+        {% endfor %}
     </table>
-
+   
 </body>
 </html>
