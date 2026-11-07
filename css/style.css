@@ -1,0 +1,104 @@
+:root{
+    --fundo: #f1f5f9;
+    --principal: #0e7490;
+    --hover: #155e75;
+    --card: #ffffff;
+    --texto:#1e293b;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+header{
+    background-color: var(--card);
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    color: var(--principal);
+}
+
+nav{
+    display: flex;
+    gap: 20px;
+}
+
+nav a{
+    color: var(--texto);
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: var(--principal);
+}
+
+.banner{
+    text-align: center;
+    padding: 70px 20px;
+    background-color: linear-gradient(120deg, #cffafe, #e0f2fe);
+}
+
+.banner h2{
+    font-size: 36px;
+}
+
+.banner p{
+    margin-bottom: 30px;
+}
+
+.botao, 
+button{
+    display: inline-block;
+    background-color: var(--principal);
+    color: white;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.botao:hover,
+button:hover{
+    background-color: var(--hover);
+}
+
+.destinos{
+    padding: 35px 8%;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: var(--card);
+    padding: 25px;
+    border-radius: 25px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+}
+
+.imagem{
+    font-size: 55px;
+    background-color: #e0f2fe;
+    padding: 25px;
+    border-radius: 8px;
+}
