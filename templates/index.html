@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/script.js"></script>
     <title>Food Experience</title>
 </head>
 <body>
@@ -82,8 +81,85 @@
                 Nenhum produto encontrado.
             </p>
         </section>
-        
+
+        <section class="sobre" id="sobre">
+            <div>
+                <span class="etiqueta">NOSSA PROPOSTA</span>
+                <h2>Mais que uma refeição.<br>Uma experiência.</h2>
+
+                <p>
+                    No Food Experience, acreditamos que uma boa refeição
+                    começa com ingredientes de qualidade e termina
+                    com aquele desejo de repetir.
+                </p>
+            </div>  
+        </section>
+
+        <section class="area-carrinho" id="areaCarrinho">
+            <div class="cabecalho-carrinho">
+                <h2>Seu carrinho</h2>
+                <button id="fecharCarrinho" class="botao-fechar">
+                    X
+                </button>
+            </div>
+
+            <div class="itens-carrinhos" id="itensCarrinho">
+
+            </div>
+
+            <div class="resumo-carrinho">
+                <div class="linha-total">
+                    <span>Subtotal</span>
+                    <strong id="subtotal">R$ 0,00</strong>
+                </div>
+
+                <div class="linha-total">
+                    <span>Entrega</span>
+                    <strong id="valorEntrega">R$ 5,00</strong>
+                </div>
+
+                <div class="linha total total-final">
+                    <span>Total</span>
+                    <strong id="total">R$ 0,00</strong>
+                </div>
+
+                <form id="formPedido">
+
+                    <h3>Finalizar pedido</h3>
+
+                    <label for="nomeCliente">Seu nome:</label>
+                    <br><br>
+                    <input type="text" id="nomeCliente" placeholder="Digite seu nome" required>
+                    <br><br>
+
+                    <label for="enderecoCliente">Endereço de entrega:</label>
+                    <br><br>
+                    <input type="text" id="enderecoCliente" placeholder="Digite seu endereco" required>
+                    <br><br>
+
+                    <button type="submit">
+                        Finalizar Pedido
+                    </button>
+                </form>
+
+                <p id="mensagemPedido" aria-live="polite"></p>
+            </div>
+        </section>
+
+        <div class="fundo-carrinho" id="fundoCarrinho"></div>
+
     </main>
+
+    <footer class="rodape">
+
+        <h2>FOOD EXPERIENCE</h2>
+
+        <p>Uma experiência de sabor a cada pedido.</p>
+
+        <p>&copy <span id="year"></span> Food Experience. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/js/script.js"></script>
 
 </body>
 </html>
