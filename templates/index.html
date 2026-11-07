@@ -3,74 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Filmes</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Travel Experience</title>
 </head>
 <body>
     
-    <h1>Cadastro de Filmes</h1>
+    <header>
+        <h1>✈️Travel Experience</h1>
 
-    <form action="/cadastrar" method="POST">
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="#destinos">Destinos</a>
+            <a href="cadastro.html">Cadastre-se</a>
+        </nav>
+    </header>
 
-        <label for="titulo">Título:</label>
-        <br><br>
-        <input type="text" name="titulo" placeholder="Nome do filme" required>
-        <br><br>
-
-        <label>Gênero:</label>
-        <select name="genero" id="genero" required>
-            <option value="">Escolha:</option>
-            <option value="Ação">Ação</option>
-            <option value="Comédia">Comédia</option>
-            <option value="Drama">Drama</option>
-            <option value="Terror">Terror</option>
-            <option value="Ficção Científica">Ficção Científica</option>
-            <option value="Romance">Romance</option>
-            <option value="Animação">Animação</option>
-        </select><br><br>
-
-        <label>Nota: <span id="valorNota">5</span></label>
-        <br>
-        <input type="range" name="nota" min="0" max="10" value="5"
-            oninput="document.getElementById('valorNota').textContent = this.value">
-            <br><br>
+    <main>
         
-        <label>Ano de Lançamento:</label>
-        <br><br>
-        <input type="number" name="ano" id="ano" min="1900" max="2026" placeholder="2024">
-        <br><br>
+        <section class="banner">
+            <h2>O mundo espera por você!</h2>
+            <p>
+                Descubra lugares incríveis e viva experiências
+                inesquecíveis.
+            </p>
+            <a href="/templates/cadastro.html" class="botao">
+                    Conheça os destinos
+            </a>
+        </section>
 
-        <label>
-            <input type="checkbox" name="assistido" value="Sim">
-            Já assisti
-        </label>
+        <section class="destinos" id="destinos">
+            <h2>Destinos em destaque</h2>
+            <div class="container">
+                
+                <article class="card">
+                    <div class="imagem">🏖️</div>
+                    <h3>Rio de Janeiro</h3>
+                    <p>Praias, paisagens e muita diversão.</p>
+                </article>
 
-        <button type="submit">Cadastrar</button>
+                <article class="card">
+                    <div class="imagem">🗼</div>
+                    <h3>Paris</h3>
+                    <p>Romance, cultura e gastronomia.</p>
+                </article>
 
-    </form>
+                <article class="card">
+                    <div class="imagem">🌴</div>
+                    <h3>Maldivas</h3>
+                    <p>Praias paradisíacas e tranquilidade.</p>
+                </article>
 
-    <h2>Filmes cadastrados</h2>
+            </div>
+        </section>
+        
+    </main>
 
-    <table border="1">
+    <footer>
+        <p>Travel Experience ©2026</p>
+    </footer>
 
-        <tr>
-            <th>ID</th>
-            <th>Título</th>
-            <th>Gênero</th>
-            <th>Nota</th>
-            <th>Ano</th>
-            <th>Assistido</th>
-        </tr>
-        {% for filme in filmes %}
-        <tr>
-            <td>{{ filme.id }}</td>
-            <td>{{ filme.titulo }}</td>
-            <td>{{ filme.genero }}</td>
-            <td>{{ filme.nota }}</td>
-            <td>{{ filme.ano }}</td>
-            <td>{{ filme.assistido }}</td>
-        </tr>
-        {% endfor %}
-    </table>
-   
+
 </body>
 </html>
