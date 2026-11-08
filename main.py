@@ -1,5 +1,8 @@
-idade = int(input("Digite a idade: "))
-altura = float(input("Digite a altura: "))
-
-print(f"A idade é: {idade}")
-print(f"A altura é: {altura:.2f}")
+def par_ou_impar(numero):
+    if numero % 2 == 0:
+        return "Par"
+    else:
+        return "Ímpar"
+    
+numero = int(input("Digite um número: "))
+print(f"{numero} é {par_ou_impar(numero)}")
