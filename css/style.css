@@ -7,7 +7,6 @@
     --cor-texto: #333333;
 }
 
-/* CONFIGURAÇÕES GERAIS */
 
 * {
     margin: 0;
@@ -25,7 +24,7 @@ body {
     color: var(--cor-texto);
 }
 
-/* CABEÇALHO */
+
 
 .header {
     background: white;
@@ -69,8 +68,6 @@ body {
     padding: 12px 18px;
     border-radius: 6px;
 }
-
-/* BANNER */
 
 .banner {
     min-height: 520px;
@@ -130,7 +127,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* INTRODUÇÃO */
+
 
 .introducao {
     text-align: center;
@@ -148,7 +145,7 @@ body {
     line-height: 1.6;
 }
 
-/* DESTINOS */
+
 
 .destinos {
     padding: 30px 8% 80px;
@@ -261,7 +258,6 @@ body {
     color: #777;
 }
 
-/* CADASTRO */
 
 .area-formulario {
     min-height: 75vh;
@@ -321,7 +317,7 @@ body {
     line-height: 1.5;
 }
 
-/* RODAPÉ */
+
 
 .footer {
     background: var(--cor-principal);
@@ -340,7 +336,6 @@ body {
     color: #d5e0eb;
 }
 
-/* RESPONSIVIDADE */
 
 @media (max-width: 900px) {
     .container-cards {

@@ -1,8 +1,4 @@
 
-// ==========================================
-// LISTA DE DESTINOS
-// ==========================================
-
 const destinos = [
 
     {
@@ -116,9 +112,6 @@ const destinos = [
 ];
 
 
-// ==========================================
-// ELEMENTOS DA PÁGINA
-// ==========================================
 
 const containerDestinos = document.querySelector("#containerDestinos");
 const pesquisa = document.querySelector("#pesquisa");
@@ -126,9 +119,7 @@ const filtroRegiao = document.querySelector("#filtroRegiao");
 const mensagemVazia = document.querySelector("#mensagemVazia");
 
 
-// ==========================================
-// FUNÇÃO PARA MOSTRAR OS DESTINOS
-// ==========================================
+
 
 function mostrarDestinos(lista) {
 
@@ -185,10 +176,6 @@ function mostrarDestinos(lista) {
 }
 
 
-// ==========================================
-// PESQUISA E FILTROS
-// ==========================================
-
 function filtrarDestinos() {
 
     const termo = pesquisa.value.toLowerCase();
@@ -213,9 +200,6 @@ function filtrarDestinos() {
 }
 
 
-// ==========================================
-// EVENTOS DA PÁGINA DE DESTINOS
-// ==========================================
 
 if (containerDestinos) {
 
@@ -228,9 +212,6 @@ if (containerDestinos) {
 }
 
 
-// ==========================================
-// FORMULÁRIO DE CADASTRO
-// ==========================================
 
 const formulario = document.querySelector("#formCadastro");
 
