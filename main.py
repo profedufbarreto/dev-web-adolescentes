@@ -1,8 +1,8 @@
-def par_ou_impar(numero):
-    if numero % 2 == 0:
-        return "Par"
-    else:
-        return "Ímpar"
-    
-numero = int(input("Digite um número: "))
-print(f"{numero} é {par_ou_impar(numero)}")
+def somar_ate(n):
+    soma = 0
+    for i in range(1, n + 1):
+        soma += i
+    return soma
+
+n = int(input("Digite um número: "))
+print(f"Soma de 1 até {n} = {somar_ate(n)}")
