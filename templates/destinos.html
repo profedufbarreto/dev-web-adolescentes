@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nossos Destinos | Travel Experience</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+</head> 
+
+<body>
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            Travel<span>Experience</span>
+        </a>
+
+        <nav class="menu">
+            <a href="index.html">Início</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="index.html#sobre">Sobre</a>
+            <a href="cadastro.html" class="botao-menu">Cadastre-se</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="banner banner-destinos">
+
+            <div class="banner-conteudo">
+
+                <span class="subtitulo">EXPLORE O MUNDO</span>
+
+                <h1>Destinos para viver grandes experiências.</h1>
+
+                <p>
+                    Conheça lugares incríveis, descubra novas culturas
+                    e encontre o destino perfeito para sua próxima viagem.
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="introducao">
+
+            <span class="destaque">ESCOLHA SUA PRÓXIMA AVENTURA</span>
+
+            <h2>Nossos destinos</h2>
+
+            <p>
+                De paisagens brasileiras a lugares inesquecíveis
+                ao redor do mundo.
+            </p>
+
+        </section>
+
+        <section class="destinos" id="destinos">
+
+            <div class="filtros">
+
+                <input
+                    type="text"
+                    id="pesquisa"
+                    placeholder="Pesquisar destino..."
+                >
+
+                <select id="filtroRegiao">
+                    <option value="todos">Todos os destinos</option>
+                    <option value="brasil">Brasil</option>
+                    <option value="internacional">Internacionais</option>
+                </select>
+
+            </div>
+
+            <div
+                class="container-cards"
+                id="containerDestinos">
+            </div>
+
+            <p id="mensagemVazia" class="mensagem-vazia">
+                Nenhum destino encontrado.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <h2>Travel Experience</h2>
+
+        <p>Descubra o mundo. Viva experiências.</p>
+
+        <p class="copyright">
+            © 2026 Travel Experience. Projeto educacional.
+        </p>
+
+    </footer>
+
+</body>
+</html>

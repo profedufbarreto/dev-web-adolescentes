@@ -1,165 +1,72 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Food Experience</title>
+    <title>Travel Experience | Descubra o mundo</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
 </head>
 <body>
-    
-    <header class="cabecalho">
-        <a href="#" class="logo">
-            FOOD<span>EXPERIENCE</span>
-        </a>
 
-        <nav class="navegacao">
-            <a href="#">Início</a>
-            <a href="#cardapio">Cardápio</a>
+    <header class="header">
+        <a href="index.html" class="logo">Travel<span>Experience</span></a>
+
+        <nav class="menu">
+            <a href="index.html">Início</a>
+            <a href="/templates/destinos.html">Destinos</a>
             <a href="#sobre">Sobre</a>
+            <a href="cadastro.html" class="botao-menu">Cadastre-se</a>
         </nav>
-
-        <button class="botao-carrinho" id="abrirCarrinho">
-            🛒Carrinho
-            <span id="contadorCarrinho">0</span>
-        </button>
     </header>
 
     <main>
-        <section class="banner" id="inicio">
+        <section class="banner">
             <div class="banner-conteudo">
-                <span class="etiqueta">SABOR QUE SURPREENDE</span>
-
-                <h1>
-                    Uma experiência <br>
-                    <span>para seu paladar.</span>
-                </h1>
-                <p>
-                    Ingredientes selecionados, receitas especiais
-                    e muito sabor em cada pedido.
-                </p>
-
-                <a href="#cardapio" class="botao-principal">
-                    Explorar cardápio
-                </a>
+                <span class="subtitulo">SUA PRÓXIMA AVENTURA COMEÇA AQUI</span>
+                <h1>O mundo está esperando por você.</h1>
+                <p>Descubra lugares incríveis e transforme suas próximas férias em experiências inesquecíveis.</p>
+                <a href="#destinos" class="botao">Explorar destinos</a>
             </div>
-
-            <div class="banner-imagem">
-                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=900" alt="Hambúrguer artesanal">
-            </div>
-
         </section>
 
-        <section class="secao-cardapio" id="cardapio">
-            
-            <div class="titulo-secao">
-                <span class="etiqueta">NOSSO MENU</span>
-                <h2>Explore nosso cardápio</h2>
-                <p>Escolha seus favoritos e aproveite!</p>
-            </div>
+        <section class="introducao" id="sobre">
+            <span class="destaque">EXPLORE. DESCUBRA. VIVA.</span>
+            <h2>Encontre seu próximo destino</h2>
+            <p>Selecionamos lugares especiais para você viver experiências únicas pelo mundo.</p>
+        </section>
+
+        <section class="destinos" id="destinos">
 
             <div class="filtros">
-                <button class="filtro ativo" data-categoria="todos">
-                    Todos
-                </button>
+                <input
+                    type="text"
+                    id="pesquisa"
+                    placeholder="Pesquisar destino..."
+                >
 
-                <button class="filtro" data-categoria="pizzas">
-                    Pizzas
-                </button>
-
-                <button class="filtro" data-categoria="sobremesas">
-                    Sobremesas
-                </button>
-
+                <select id="filtroRegiao">
+                    <option value="todos">Todos os destinos</option>
+                    <option value="brasil">Brasil</option>
+                    <option value="internacional">Internacionais</option>
+                </select>
             </div>
 
-            <div class="lista-produtos" id="listaProdutos">
+            <div class="container-cards" id="containerDestinos"></div>
 
-            </div>
-
-            <p class="mensagem-vazia" id="mensagemVazia">
-                Nenhum produto encontrado.
+            <p id="mensagemVazia" class="mensagem-vazia">
+                Nenhum destino encontrado.
             </p>
+
         </section>
-
-        <section class="sobre" id="sobre">
-            <div>
-                <span class="etiqueta">NOSSA PROPOSTA</span>
-                <h2>Mais que uma refeição.<br>Uma experiência.</h2>
-
-                <p>
-                    No Food Experience, acreditamos que uma boa refeição
-                    começa com ingredientes de qualidade e termina
-                    com aquele desejo de repetir.
-                </p>
-            </div>  
-        </section>
-
-        <section class="area-carrinho" id="areaCarrinho">
-            <div class="cabecalho-carrinho">
-                <h2>Seu carrinho</h2>
-                <button id="fecharCarrinho" class="botao-fechar">
-                    X
-                </button>
-            </div>
-
-            <div class="itens-carrinhos" id="itensCarrinho">
-
-            </div>
-
-            <div class="resumo-carrinho">
-                <div class="linha-total">
-                    <span>Subtotal</span>
-                    <strong id="subtotal">R$ 0,00</strong>
-                </div>
-
-                <div class="linha-total">
-                    <span>Entrega</span>
-                    <strong id="valorEntrega">R$ 5,00</strong>
-                </div>
-
-                <div class="linha total total-final">
-                    <span>Total</span>
-                    <strong id="total">R$ 0,00</strong>
-                </div>
-
-                <form id="formPedido">
-
-                    <h3>Finalizar pedido</h3>
-
-                    <label for="nomeCliente">Seu nome:</label>
-                    <br><br>
-                    <input type="text" id="nomeCliente" placeholder="Digite seu nome" required>
-                    <br><br>
-
-                    <label for="enderecoCliente">Endereço de entrega:</label>
-                    <br><br>
-                    <input type="text" id="enderecoCliente" placeholder="Digite seu endereco" required>
-                    <br><br>
-
-                    <button type="submit">
-                        Finalizar Pedido
-                    </button>
-                </form>
-
-                <p id="mensagemPedido" aria-live="polite"></p>
-            </div>
-        </section>
-
-        <div class="fundo-carrinho" id="fundoCarrinho"></div>
-
     </main>
 
-    <footer class="rodape">
-
-        <h2>FOOD EXPERIENCE</h2>
-
-        <p>Uma experiência de sabor a cada pedido.</p>
-
-        <p>&copy <span id="year"></span> Food Experience. Todos os direitos reservados.</p>
+    <footer class="footer">
+        <h2>Travel Experience</h2>
+        <p>Descubra o mundo. Viva experiências.</p>
+        <p class="copyright">© 2026 Travel Experience. Projeto educacional.</p>
     </footer>
-
-    <script src="/js/script.js"></script>
 
 </body>
 </html>

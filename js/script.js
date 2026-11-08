@@ -1,512 +1,258 @@
-// Footer
 
-document.getElementById("year").textContent = new Date().getFullYear();
+// ==========================================
+// LISTA DE DESTINOS
+// ==========================================
 
-
-// ======================================
-// 1. CADASTRO DOS PRODUTOS
-// ======================================
-
-const produtos = [
+const destinos = [
 
     {
-        id: 1,
-        nome: "Classic Burger",
-        categoria: "hamburgueres",
-        descricao: "Hambúrguer artesanal, queijo e molho especial.",
-        preco: 29.90,
-        imagem: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600"
+        nome: "Rio de Janeiro",
+        regiao: "Brasil",
+        categoria: "brasil",
+        descricao: "Praias, paisagens incríveis e o charme da Cidade Maravilhosa.",
+        preco: "R$ 1.890",
+        imagem: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=800"
     },
 
     {
-        id: 2,
-        nome: "Bacon Supreme",
-        categoria: "hamburgueres",
-        descricao: "Hambúrguer, bacon crocante e queijo cheddar.",
-        preco: 34.90,
-        imagem: "https://images.unsplash.com/photo-1553979459-d2229ba7433a?w=600"
+        nome: "Fernando de Noronha",
+        regiao: "Brasil",
+        categoria: "brasil",
+        descricao: "Águas cristalinas e praias paradisíacas.",
+        preco: "R$ 3.490",
+        imagem: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=800"
     },
 
     {
-        id: 3,
-        nome: "Double Cheese",
-        categoria: "hamburgueres",
-        descricao: "Dois hambúrgueres, queijo duplo e molho da casa.",
-        preco: 39.90,
-        imagem: "https://images.unsplash.com/photo-1553979459-d2229ba7433a?w=600"
+        nome: "Foz do Iguaçu",
+        regiao: "Brasil",
+        categoria: "brasil",
+        descricao: "Conheça uma das maiores maravilhas naturais do mundo.",
+        preco: "R$ 1.590",
+        imagem: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800"
     },
 
     {
-        id: 4,
-        nome: "Pizza Pepperoni",
-        categoria: "pizzas",
-        descricao: "Molho de tomate, queijo e pepperoni.",
-        preco: 49.90,
-        imagem: "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=600"
+        nome: "Gramado",
+        regiao: "Brasil",
+        categoria: "brasil",
+        descricao: "Clima europeu, gastronomia e paisagens encantadoras.",
+        preco: "R$ 1.290",
+        imagem: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=800"
     },
 
     {
-        id: 5,
-        nome: "Pizza Margherita",
-        categoria: "pizzas",
-        descricao: "Queijo, tomate fresco e manjericão.",
-        preco: 45.90,
-        imagem: "https://images.unsplash.com/photo-1579751626657-72bc17010498?w=600"
+        nome: "Paris",
+        regiao: "Europa",
+        categoria: "internacional",
+        descricao: "A cidade da Torre Eiffel, da arte e do romance.",
+        preco: "R$ 6.990",
+        imagem: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800"
     },
 
     {
-        id: 6,
-        nome: "Refrigerante",
-        categoria: "bebidas",
-        descricao: "Refrigerante gelado de 350 ml.",
-        preco: 7.00,
-        imagem: "https://images.unsplash.com/photo-1581636625402-29b2a704ef13?w=600"
+        nome: "Maldivas",
+        regiao: "Ásia",
+        categoria: "internacional",
+        descricao: "Resorts paradisíacos e águas azul-turquesa.",
+        preco: "R$ 9.890",
+        imagem: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800"
     },
 
     {
-        id: 7,
-        nome: "Suco Natural",
-        categoria: "bebidas",
-        descricao: "Suco natural de laranja.",
-        preco: 9.90,
-        imagem: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=600"
+        nome: "Nova York",
+        regiao: "América do Norte",
+        categoria: "internacional",
+        descricao: "Arranha-céus, cultura e uma cidade que nunca dorme.",
+        preco: "R$ 7.490",
+        imagem: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800"
     },
 
     {
-        id: 8,
-        nome: "Brownie",
-        categoria: "sobremesas",
-        descricao: "Brownie de chocolate com calda especial.",
-        preco: 14.90,
-        imagem: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600"
+        nome: "Roma",
+        regiao: "Europa",
+        categoria: "internacional",
+        descricao: "História, arquitetura e gastronomia italiana.",
+        preco: "R$ 6.490",
+        imagem: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800"
     },
 
     {
-        id: 9,
-        nome: "Cheesecake",
-        categoria: "sobremesas",
-        descricao: "Cheesecake cremoso com cobertura de frutas.",
-        preco: 16.90,
-        imagem: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600"
+        nome: "Santorini",
+        regiao: "Europa",
+        categoria: "internacional",
+        descricao: "Casas brancas, mar azul e pores do sol incríveis.",
+        preco: "R$ 7.290",
+        imagem: "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=800"
+    },
+
+    {
+        nome: "Tóquio",
+        regiao: "Ásia",
+        categoria: "internacional",
+        descricao: "Tecnologia, tradição e cultura japonesa.",
+        preco: "R$ 8.990",
+        imagem: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800"
+    },
+
+    {
+        nome: "Machu Picchu",
+        regiao: "América do Sul",
+        categoria: "internacional",
+        descricao: "Uma viagem fascinante pela história dos Incas.",
+        preco: "R$ 4.890",
+        imagem: "https://images.unsplash.com/photo-1526392060635-9d6019884377?w=800"
+    },
+
+    {
+        nome: "Alpes Suíços",
+        regiao: "Europa",
+        categoria: "internacional",
+        descricao: "Montanhas, neve e paisagens impressionantes.",
+        preco: "R$ 8.490",
+        imagem: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800"
     }
 
 ];
 
 
-// ======================================
-// 2. SELEÇÃO DOS ELEMENTOS HTML
-// ======================================
+// ==========================================
+// ELEMENTOS DA PÁGINA
+// ==========================================
 
-const listaProdutos = document.querySelector("#listaProdutos");
-
-const filtros = document.querySelectorAll(".filtro");
-
-const campoPesquisa = document.querySelector("#campoPesquisa");
-
+const containerDestinos = document.querySelector("#containerDestinos");
+const pesquisa = document.querySelector("#pesquisa");
+const filtroRegiao = document.querySelector("#filtroRegiao");
 const mensagemVazia = document.querySelector("#mensagemVazia");
 
-const abrirCarrinho = document.querySelector("#abrirCarrinho");
 
-const fecharCarrinho = document.querySelector("#fecharCarrinho");
+// ==========================================
+// FUNÇÃO PARA MOSTRAR OS DESTINOS
+// ==========================================
 
-const areaCarrinho = document.querySelector("#areaCarrinho");
+function mostrarDestinos(lista) {
 
-const fundoCarrinho = document.querySelector("#fundoCarrinho");
+    if (!containerDestinos) return;
 
-const itensCarrinho = document.querySelector("#itensCarrinho");
+    containerDestinos.innerHTML = "";
 
-const contadorCarrinho = document.querySelector("#contadorCarrinho");
-
-const subtotalElemento = document.querySelector("#subtotal");
-
-const valorEntregaElemento = document.querySelector("#valorEntrega");
-
-const totalElemento = document.querySelector("#total");
-
-const formPedido = document.querySelector("#formPedido");
-
-const mensagemPedido = document.querySelector("#mensagemPedido");
-
-
-// ======================================
-// 3. VARIÁVEIS DO SISTEMA
-// ======================================
-
-let carrinho = [];
-
-let categoriaSelecionada = "todos";
-
-const valorEntrega = 5;
-
-
-// ======================================
-// 4. FORMATAR VALORES EM REAIS
-// ======================================
-
-function formatarMoeda(valor) {
-
-    return valor.toLocaleString("pt-BR", {
-        style: "currency",
-        currency: "BRL"
-    });
-
-}
-
-
-// ======================================
-// 5. EXIBIR OS PRODUTOS
-// ======================================
-
-function mostrarProdutos(lista) {
-
-    listaProdutos.innerHTML = "";
-
-    mensagemVazia.style.display = lista.length === 0
-        ? "block"
-        : "none";
-
-    lista.forEach(function(produto) {
+    lista.forEach(function(destino) {
 
         const card = document.createElement("article");
+        card.classList.add("card");
 
-        card.classList.add("card-produto");
+        const imagem = document.createElement("img");
 
-        card.innerHTML = `
+        imagem.src = destino.imagem;
+        imagem.alt = destino.nome;
+        imagem.loading = "lazy";
 
-            <img src="${produto.imagem}" alt="${produto.nome}">
+        // Imagem alternativa se a principal não carregar
+        imagem.onerror = function() {
+            this.onerror = null;
+            this.src = "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800";
+        };
 
-            <div class="info-produto">
+        const conteudo = document.createElement("div");
+        conteudo.classList.add("card-conteudo");
 
-                <h3>${produto.nome}</h3>
+        conteudo.innerHTML = `
+            <span>${destino.regiao}</span>
 
-                <p>${produto.descricao}</p>
+            <h3>${destino.nome}</h3>
 
-                <span class="preco-produto">
-                    ${formatarMoeda(produto.preco)}
-                </span>
+            <p>${destino.descricao}</p>
 
-                <button
-                    class="botao-adicionar"
-                    data-id="${produto.id}">
+            <div class="card-rodape">
+                <strong>A partir de ${destino.preco}</strong>
 
-                    Adicionar ao carrinho
-
-                </button>
-
+                <a href="cadastro.html">Consultar</a>
             </div>
-
         `;
 
-        listaProdutos.appendChild(card);
+        card.appendChild(imagem);
+        card.appendChild(conteudo);
+
+        containerDestinos.appendChild(card);
 
     });
 
-}
-
-
-// ======================================
-// 6. FILTRAR OS PRODUTOS
-// ======================================
-
-function filtrarProdutos() {
-
-    const texto = campoPesquisa.value.toLowerCase();
-
-    const resultado = produtos.filter(function(produto) {
-
-        const correspondeCategoria =
-            categoriaSelecionada === "todos" ||
-            produto.categoria === categoriaSelecionada;
-
-        const correspondePesquisa =
-            produto.nome.toLowerCase().includes(texto);
-
-        return correspondeCategoria && correspondePesquisa;
-
-    });
-
-    mostrarProdutos(resultado);
-
-}
-
-
-// ======================================
-// 7. CLICAR NOS FILTROS
-// ======================================
-
-filtros.forEach(function(botao) {
-
-    botao.addEventListener("click", function() {
-
-        filtros.forEach(function(filtro) {
-            filtro.classList.remove("ativo");
-        });
-
-        botao.classList.add("ativo");
-
-        categoriaSelecionada = botao.dataset.categoria;
-
-        filtrarProdutos();
-
-    });
-
-});
-
-
-// ======================================
-// 8. PESQUISAR PRODUTOS
-// ======================================
-
-campoPesquisa.addEventListener("input", function() {
-
-    filtrarProdutos();
-
-});
-
-
-// ======================================
-// 9. ADICIONAR PRODUTOS AO CARRINHO
-// ======================================
-
-listaProdutos.addEventListener("click", function(event) {
-
-    if (!event.target.classList.contains("botao-adicionar")) {
-        return;
-    }
-
-    const id = Number(event.target.dataset.id);
-
-    const produto = produtos.find(function(item) {
-        return item.id === id;
-    });
-
-    const produtoNoCarrinho = carrinho.find(function(item) {
-        return item.id === id;
-    });
-
-    if (produtoNoCarrinho) {
-
-        produtoNoCarrinho.quantidade++;
-
-    } else {
-
-        carrinho.push({
-            ...produto,
-            quantidade: 1
-        });
-
-    }
-
-    atualizarCarrinho();
-
-});
-
-
-// ======================================
-// 10. ATUALIZAR O CARRINHO
-// ======================================
-
-function atualizarCarrinho() {
-
-    itensCarrinho.innerHTML = "";
-
-    let subtotal = 0;
-
-    let quantidadeTotal = 0;
-
-    carrinho.forEach(function(produto) {
-
-        const totalProduto = produto.preco * produto.quantidade;
-
-        subtotal += totalProduto;
-
-        quantidadeTotal += produto.quantidade;
-
-        const item = document.createElement("div");
-
-        item.classList.add("item-carrinho");
-
-        item.innerHTML = `
-
-            <div>
-
-                <h4>${produto.nome}</h4>
-
-                <p>${formatarMoeda(totalProduto)}</p>
-
-                <div class="controles-quantidade">
-
-                    <button data-acao="diminuir" data-id="${produto.id}">
-                        -
-                    </button>
-
-                    <span>${produto.quantidade}</span>
-
-                    <button data-acao="aumentar" data-id="${produto.id}">
-                        +
-                    </button>
-
-                </div>
-
-            </div>
-
-            <button
-                class="botao-remover"
-                data-acao="remover"
-                data-id="${produto.id}">
-
-                Remover
-
-            </button>
-
-        `;
-
-        itensCarrinho.appendChild(item);
-
-    });
-
-    contadorCarrinho.textContent = quantidadeTotal;
-
-    const entrega = carrinho.length > 0 ? valorEntrega : 0;
-
-    subtotalElemento.textContent = formatarMoeda(subtotal);
-
-    valorEntregaElemento.textContent = formatarMoeda(entrega);
-
-    totalElemento.textContent = formatarMoeda(subtotal + entrega);
-
-    if (carrinho.length === 0) {
-
-        itensCarrinho.textContent = "Seu carrinho está vazio.";
-
+    if (mensagemVazia) {
+        mensagemVazia.style.display =
+            lista.length === 0 ? "block" : "none";
     }
 
 }
 
 
-// ======================================
-// 11. ALTERAR QUANTIDADE E REMOVER ITENS
-// ======================================
+// ==========================================
+// PESQUISA E FILTROS
+// ==========================================
 
-itensCarrinho.addEventListener("click", function(event) {
+function filtrarDestinos() {
 
-    const botao = event.target.closest("button");
+    const termo = pesquisa.value.toLowerCase();
 
-    if (!botao) {
-        return;
-    }
+    const regiao = filtroRegiao.value;
 
-    const id = Number(botao.dataset.id);
+    const resultado = destinos.filter(function(destino) {
 
-    const acao = botao.dataset.acao;
+        const correspondeNome =
+            destino.nome.toLowerCase().includes(termo);
 
-    const produto = carrinho.find(function(item) {
-        return item.id === id;
+        const correspondeRegiao =
+            regiao === "todos" ||
+            destino.categoria === regiao;
+
+        return correspondeNome && correspondeRegiao;
+
     });
 
-    if (!produto) {
-        return;
-    }
-
-    if (acao === "aumentar") {
-
-        produto.quantidade++;
-
-    }
-
-    if (acao === "diminuir") {
-
-        produto.quantidade--;
-
-        if (produto.quantidade <= 0) {
-
-            carrinho = carrinho.filter(function(item) {
-                return item.id !== id;
-            });
-
-        }
-
-    }
-
-    if (acao === "remover") {
-
-        carrinho = carrinho.filter(function(item) {
-            return item.id !== id;
-        });
-
-    }
-
-    atualizarCarrinho();
-
-});
-
-
-// ======================================
-// 12. ABRIR E FECHAR O CARRINHO
-// ======================================
-
-function abrirPainelCarrinho() {
-
-    areaCarrinho.classList.add("aberto");
-
-    fundoCarrinho.classList.add("visivel");
+    mostrarDestinos(resultado);
 
 }
 
-function fecharPainelCarrinho() {
 
-    areaCarrinho.classList.remove("aberto");
+// ==========================================
+// EVENTOS DA PÁGINA DE DESTINOS
+// ==========================================
 
-    fundoCarrinho.classList.remove("visivel");
+if (containerDestinos) {
+
+    pesquisa.addEventListener("input", filtrarDestinos);
+
+    filtroRegiao.addEventListener("change", filtrarDestinos);
+
+    mostrarDestinos(destinos);
 
 }
 
-abrirCarrinho.addEventListener("click", abrirPainelCarrinho);
 
-fecharCarrinho.addEventListener("click", fecharPainelCarrinho);
+// ==========================================
+// FORMULÁRIO DE CADASTRO
+// ==========================================
 
-fundoCarrinho.addEventListener("click", fecharPainelCarrinho);
+const formulario = document.querySelector("#formCadastro");
 
+if (formulario) {
 
-// ======================================
-// 13. FINALIZAR PEDIDO
-// ======================================
+    formulario.addEventListener("submit", function(event) {
 
-formPedido.addEventListener("submit", function(event) {
+        event.preventDefault();
 
-    event.preventDefault();
+        const nome = document.querySelector("#nome").value;
 
-    if (carrinho.length === 0) {
+        const destino = document.querySelector("#destino").value;
 
-        mensagemPedido.textContent =
-            "Adicione produtos ao carrinho antes de finalizar.";
+        const mensagem = document.querySelector("#mensagem");
 
-        return;
+        mensagem.textContent =
+            "Olá, " + nome +
+            "! Recebemos seu interesse em viajar para " +
+            destino + ". Em breve entraremos em contato!";
 
-    }
+        formulario.reset();
 
-    const nome = document.querySelector("#nomeCliente").value;
+    });
 
-    const endereco = document.querySelector("#enderecoCliente").value;
-
-    mensagemPedido.textContent =
-        "Obrigado, " + nome +
-        "! Seu pedido foi registrado para entrega em " +
-        endereco + ". Total: " + totalElemento.textContent;
-
-    carrinho = [];
-
-    atualizarCarrinho();
-
-    formPedido.reset();
-
-});
-
-
-// ======================================
-// 14. INICIALIZAÇÃO DO SITE
-// ======================================
-
-mostrarProdutos(produtos);
-
-atualizarCarrinho();
+}

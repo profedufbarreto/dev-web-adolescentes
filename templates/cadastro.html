@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se | Travel Experience</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">Travel<span>Experience</span></a>
+
+        <nav class="menu">
+            <a href="/templates/index.html">Início</a>
+            <a href="/templates/destinos.html">Destinos</a>
+        </nav>
+    </header>
+
+    <main class="area-formulario">
+        <div class="formulario-conteudo">
+            <span class="destaque">VAMOS PLANEJAR SUA VIAGEM?</span>
+            <h1>Cadastre-se</h1>
+            <p>Preencha seus dados e escolha o destino dos seus sonhos.</p>
+
+            <form id="formCadastro">
+
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" required placeholder="Digite seu nome">
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" required placeholder="Digite seu e-mail">
+
+                <label for="destino">Destino desejado</label>
+                <select id="destino" required>
+                    <option value="">Selecione um destino</option>
+                    <option>Rio de Janeiro</option>
+                    <option>Fernando de Noronha</option>
+                    <option>Foz do Iguaçu</option>
+                    <option>Gramado</option>
+                    <option>Paris</option>
+                    <option>Maldivas</option>
+                    <option>Nova York</option>
+                    <option>Roma</option>
+                    <option>Santorini</option>
+                    <option>Tóquio</option>
+                    <option>Machu Picchu</option>
+                    <option>Alpes Suíços</option>
+                </select>
+
+                <button type="submit" class="botao">Enviar cadastro</button>
+
+                <p id="mensagem"></p>
+
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Travel Experience.</p>
+    </footer>
+
+</body>
+</html>
