@@ -1,8 +1,14 @@
-def somar_ate(n):
-    soma = 0
-    for i in range(1, n + 1):
-        soma += i
-    return soma
+def maior_da_lista(valores):
+    maior = valores[0]
+    i = 1
+    while i < len(valores):
+        if valores[i] > maior:
+            maior = valores[i]
+        i += 1
+    return maior
 
-n = int(input("Digite um número: "))
-print(f"Soma de 1 até {n} = {somar_ate(n)}")
+numeros = []
+for i in range(5):
+    numeros.append(int(input(f"Número {i + 1}: ")))
+
+print(f"Maior: {maior_da_lista(numeros)}")
